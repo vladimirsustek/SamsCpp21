@@ -42,6 +42,7 @@ class Horse: public Mammal
 public:
     Horse():Mammal(10) {; cout << "Horse constructor" << endl;} /** Passing Argument to Base Constructor (itsAge) */
     ~Horse() {cout << "Horse destructor" << endl;}
+    Horse* Clone() {return new Horse(*this); }
     void SetAge(int age) {itsAge = age;}
     void Speak(void) {cout << "Whinny" << endl;};
 };
@@ -51,6 +52,7 @@ class Dog: public Mammal
 public:
     Dog():Mammal(5) {cout << "Dog constructor" << endl;} /** Passing Argument to Base Constructor (itsAge)*/
     ~Dog() {cout << "Dog constructor" << endl;}
+    Dog* Clone() {return new Dog(*this); }
     void SetAge(int age) {itsAge = age; }
     void Speak(void) {cout << "Woef" << endl;};
 };
@@ -60,6 +62,7 @@ class Cat: public Mammal
 public:
     Cat():Mammal(2) {cout << "Cat constructor" << endl;} /** Passing Argument to Base Constructor (itsAge)*/
     ~Cat() {cout << "Cat constructor" << endl;}
+    Cat* Clone() {return new Cat(*this); }
     void SetAge(int age) {itsAge = age; }
     void Speak(void) {cout << "Meow" << endl;};
 };
@@ -108,6 +111,8 @@ int main()
             break;
         }
 
+        cout << "pMammal->Speak(): ";
+        /*Power of C++ calling method of derived class (overridden) using base class pointer*/
         pMammal->Speak();
         pMammal->SetNumber(i);
 
@@ -116,6 +121,9 @@ int main()
         clonedArrayOfPointers[i] = pMammal->Clone();
 
         FunctionDeletingMammal(pMammal);
+
+        cout << "clonedArrayOfPointers[i]->Speak(): ";
+        clonedArrayOfPointers[i]->Speak();
 
         cout << "----------------------" << endl;
 
