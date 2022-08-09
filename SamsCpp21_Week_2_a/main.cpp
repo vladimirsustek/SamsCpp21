@@ -118,6 +118,7 @@ int main()
 
         cout << "Objects number is: " << pMammal->GetNumber() << " and age: " << pMammal->GetAge() << endl;
 
+        /* Clone is kind of "Copy Constructor */
         clonedArrayOfPointers[i] = pMammal->Clone();
 
         FunctionDeletingMammal(pMammal);
