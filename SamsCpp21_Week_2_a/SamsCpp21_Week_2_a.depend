@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1656870205 source:c:\codeblocksrepo\samscpp21_week_2\main.cpp
+	<iostream>
+
+1656870205 source:c:\codeblocksrepo\samscpp21_week_2_a\main.cpp
+	<iostream>
+
