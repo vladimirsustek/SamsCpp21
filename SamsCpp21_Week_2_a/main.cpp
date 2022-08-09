@@ -113,9 +113,9 @@ int main()
 
         cout << "Objects number is: " << pMammal->GetNumber() << " and age: " << pMammal->GetAge() << endl;
 
-        FunctionDeletingMammal(pMammal);
-
         clonedArrayOfPointers[i] = pMammal->Clone();
+
+        FunctionDeletingMammal(pMammal);
 
         cout << "----------------------" << endl;
 
@@ -148,6 +148,5 @@ int main()
 
     cout << "Deleting Horse object from calling myHorse.Mammal::Speak() - LOCATED ON STACK" << endl;
 
-    for
     return 0;
 }

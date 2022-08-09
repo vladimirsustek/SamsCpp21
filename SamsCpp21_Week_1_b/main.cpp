@@ -56,10 +56,14 @@ Counter Counter::operator+ (const Counter & rhs)
 
 Counter Counter::operator= (const Counter & rhs)
 {
-    /* Protection for assigment this = this
+    /* Protection for assignment this = this
     in this case when no allocation and deallocation
     takes place in the class in this fine */
+    if(this  == &rhs)
+    {
+        cout << "You tried to assign itself to itself, returned instance's *this" << endl;
         return *this;
+    }
     /* Copying all to fullfill '=' operation */
     itsVal = rhs.GetItsVal();
 
@@ -109,6 +113,10 @@ int main()
     int intValue = third;
 
     cout << "Value of intValue is " << intValue << " as third's value was " << third.GetItsVal() << endl;
+
+    cout << "\nTry to assign first into first: first = first" << endl;
+
+    first = first;
 
     return 0;
 }
