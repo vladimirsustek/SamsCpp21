@@ -26,12 +26,11 @@ private:
 
 };
 
-//char Beta::character = 'β'; // did not fit within 8-bits
+//string Beta::character = 'β'; // did not fit within 8-bits
 char Beta::character = 'B';
-//char char Beta::privateCharacter = 'B'; // did not fit within 8-bits
 char Beta::privateCharacter = 'B';
 
-class Gamma /* The Gamma has-a Alfa and Beta */
+class Gamma /* The Gamma has-a Alfa, Beta and Gamma */
 {
 public:
     Alfa a;
@@ -39,10 +38,10 @@ public:
     Gamma() {cout << "Gamma's constructor" << endl;}
     void ItsOnlyMethod() {cout << "Gamma's only method" << endl;};
 };
-
-class Delta /* Uses functionalities of Alfa, because was called as an Friend of Alfa*/
+class Delta
 {
 public:
+    Alfa a;
     Delta()
     {
         cout << "Delta constructor" << endl;
@@ -52,14 +51,12 @@ public:
         "             access Alfa's PRIVATE static function (static = no instance needed)" << endl;
     }
 };
-
 class TheSameGamma : public Gamma /* The TheSameGama is-a Gamma*/
 {
 public:
     TheSameGamma() {cout << "TheSameGamma constructor" <<endl;}
 };
-
-class Epsilon : private Beta /* Beta may use Beta's protected and public attributes but does not forward it*/
+class Epsilon : private Beta
 {
 public:
     Epsilon()

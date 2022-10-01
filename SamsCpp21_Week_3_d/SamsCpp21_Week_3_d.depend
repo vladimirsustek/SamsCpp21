@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1661204346 source:c:\userdata\z004f3nw\documents\samscpp21_week_3_d\main.cpp
+	<iostream>
+	"MyNameSpaceFile.h"
+
+1661204356 c:\userdata\z004f3nw\documents\samscpp21_week_3_d\mynamespacefile.h
+	<iostream>
+
+1661204431 source:c:\userdata\z004f3nw\documents\samscpp21_week_3_d\mynamespacefile.cpp
+	"MyNameSpaceFile.h"
+

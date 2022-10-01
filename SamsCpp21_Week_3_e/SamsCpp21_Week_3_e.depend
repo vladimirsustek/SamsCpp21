@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1661327174 source:c:\userdata\z004f3nw\documents\samscpp21_week_3_e\main.cpp
+	<iostream>
+	<vector>
+	<map>
+	<list>
+	<cstdlib>
+	<algorithm>
+
